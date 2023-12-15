@@ -1,10 +1,15 @@
 import ResCard from "./ResCard";
 import { useState } from "react";
 import resList from "../utils/mockData";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [ restaurantList, setRestaurantList ] = useState(resList);
   const [ searchText, setSearchText ] = useState("");
+  const onlineStatus = useOnlineStatus();
+  if(onlineStatus === false) {
+    return <h1>Looks like you are offline !! Please check your internet connection. </h1>;
+  }
   return (
     <div className="body">
       <div className="filter">
