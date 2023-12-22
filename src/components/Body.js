@@ -24,14 +24,7 @@ const Body = () => {
         >
           Top Rated Restaurants
         </button>
-        <button
-          className="filter-btn"
-          onClick={() => {            
-            setRestaurantList(resList);
-          }}
-        >
-          Reset
-        </button>
+        
         <input
           type=""
           className="search-box"
@@ -49,6 +42,14 @@ const Body = () => {
           }}
         >
           Search
+        </button>
+        <button
+          className="filter-btn"
+          onClick={() => {            
+            setRestaurantList(resList);
+          }}
+        >
+          Reset
         </button>
       </div>
       <div className="resContainer">
